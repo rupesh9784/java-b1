@@ -21,6 +21,8 @@ public class Main
 	  System.out.println(maxEle- minEle);
 	}
 	
+	
+	// max element in an array
 	public static int maxEleArr(int[] arr){
 	    int n = arr.length;
 	    int max = arr[0];
@@ -31,6 +33,8 @@ public class Main
 	    }
 	    return max;
 	}
+	
+	// min element in an array
 	public static int minEleArr(int[] arr){
 	    int n = arr.length;
 	    int min = arr[0];
@@ -41,16 +45,18 @@ public class Main
 	    }
 	    return min;
 	}
-	public static int getFrequency(int n, int d){
-     int count = 0;
-     while(n>0){
-         int digit = n%10;
-         if(digit == d) {
-             count++;
-         }
-         n = n/10;
-     }
-     return count;
+	
+	// get frequency of a digit 
+         public static int getFrequency(int n, int d){
+	     int count = 0;
+	     while(n>0){
+		 int digit = n%10;
+		 if(digit == d) {
+		     count++;
+		 }
+		 n = n/10;
+	     }
+	     return count;
 	}
 }
 
