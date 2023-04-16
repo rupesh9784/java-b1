@@ -1,13 +1,56 @@
-import java.util.*;
+/******************************************************************************
 
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, OCaml, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+import java.util.*;
 public class Main
 {
-
 	public static void main(String[] args) {
-		System.out.println("Hello World");
+	  Scanner scn = new Scanner(System.in);
+	  int n = scn.nextInt();
+	  int[] arr = new int[n];
+	  for(int i = 0; i<n; i++){
+	      arr[i] = scn.nextInt();
+	  }
+	  int maxEle = maxEleArr(arr);
+	  int minEle = minEleArr(arr);
+	  System.out.println(maxEle- minEle);
 	}
-  
-  
-  
-  
+	
+	public static int maxEleArr(int[] arr){
+	    int n = arr.length;
+	    int max = arr[0];
+	    for(int i = 1; i<n; i++){
+	        if(arr[i] > max){
+	            max = arr[i];
+	        }
+	    }
+	    return max;
+	}
+	public static int minEleArr(int[] arr){
+	    int n = arr.length;
+	    int min = arr[0];
+	    for(int i = 1; i<n; i++){
+	        if(arr[i] < min){
+	            min = arr[i];
+	        }
+	    }
+	    return min;
+	}
+	public static int getFrequency(int n, int d){
+     int count = 0;
+     while(n>0){
+         int digit = n%10;
+         if(digit == d) {
+             count++;
+         }
+         n = n/10;
+     }
+     return count;
+	}
 }
+
